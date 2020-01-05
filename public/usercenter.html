@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="shortcut icon" href="img/LS-logo_02.png" />
+    <title>L S - 用户中心</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/usercenter.css"/>
+    <script src="js/jquery-1.11.3-min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="nav"><script>$("nav.nav").load("header.html")</script></nav>
+    <section class="section center">
+        <!--用户中心左侧-->
+        <div class="section-left">
+            <div class="user-info"></div>
+            <div class="user-details">
+                <ul class="user-details-choose">
+                    <li class="art active"><i class="fa fa-file-text"></i> 文章 <p></p></li>
+                    <li class="moment"><i class="fa fa-bell"></i> 动态 <p></p></li>
+                    <li class="comment"><i class="fa fa-commenting"></i> 最新评论 <p></p></li>
+                    <li class="hot"><i class="fa fa-fire"></i> 热门 <p></p></li>
+                </ul>
+            </div>
+            <ul class="user-content-show">
+                <img src="img/onloading.gif"  alt="" id="loading"/>
+            </ul>
+            <button class="load-more">加载更多...</button>
+        </div>
+        <!--用户中心右侧-->
+        <div class="section-right">
+            <h1>个人介绍</h1>
+            <p class="block"></p>
+            <a href=" "><i class="fa fa-th-large"></i>我关注的专题/文集</a>
+            <a href=" "><i class="fa fa-heart-o"></i>我喜欢的文章</a>
+            <p class="block"></p>
+            <a href=" ">我创建的专题</a>
+            <p class="block"></p>
+        </div>
+    </section>
+    <div class="mask">
+        <div class="user-img-change">
+            <form action="/upload" class="upload-img" id="myForm" method="post" enctype="multipart/form-data">
+                <h2>请选择头像</h2><br/>
+                <input type="file" name="logo" class="file"><br/>
+                <input type="submit" value="上传" class="upload-img button">
+            </form>
+            <i class="close fa fa-times"></i>
+        </div>
+        <div class="user-pwd-change">
+            <form action="/pwdChange" method="post">
+                <h2>请更换密码</h2><br/>
+                <input type="password" class="old-pwd" placeholder="旧密码"><br/>
+                <input type="password" class="new-pwd" placeholder="您所要修改的新密码"><br/>
+                <input type="button" value="修改" class="change-pwd button"/>
+            </form>
+            <i class="close fa fa-times"></i>
+        </div>
+    </div>
+</div>
+<br/><br/><br/>
+<script src="js/jquery_form.js"></script>
+<script src="js/usercenter.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

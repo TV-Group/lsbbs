@@ -1,0 +1,342 @@
+/*********用户中心主要内容样式设置开始***********/
+section.section{
+    display:flex;
+    justify-content: space-between;
+    margin-top:100px;
+}
+div.section-left{
+    width:60%;
+    display:flex;
+    flex-direction: column;
+}
+div.user-info{
+    display:flex;
+    padding:30px 0;
+}
+div.user-info>img{
+    width:80px;
+    height:80px;
+    border-radius:40px;
+}
+div.user-info>div{
+    margin-left:30px;
+}
+div.user-info>div.user-change{
+    display: flex;
+    flex-direction: column;
+}
+div.user-info>div.user-change>button{
+    border:none;
+    border-radius:5px;
+    margin-bottom:10px;
+    color:#666;
+    cursor:pointer;
+}
+div.user-info>div>h1{
+    color:#333;
+    font-size:32px;
+}
+div.user-info>div>div{
+    display:flex;
+    justify-content: space-around;
+}
+div.user-info>div>div>ul:not(:last-child){
+    margin-right:10px;
+    border-right:1px solid #eee;
+    padding-right:10px;
+}
+div.user-info>div>div>ul>li:nth-child(2){
+    font-size:12px;
+    color:#aaa;
+}
+
+div.user-details{
+    display: flex;
+    flex-direction: column;
+}
+div.user-details>ul.user-details-choose{
+    display:flex;
+}
+div.user-details>ul.user-details-choose>li{
+    padding:10px 0;
+    cursor:pointer;
+    color:#969696;
+    font-weight:bold;
+    text-align: center;
+    width:90px;
+}
+div.user-details>ul.user-details-choose>li>p{
+    margin:10px auto;
+    width:0;
+    height:3px;
+    background: #666;
+    transition:.2s linear;
+}
+div.user-details>ul.user-details-choose>li.active>p{
+    width:100%;
+}
+div.user-details>ul.user-details-choose>li.active{
+    color:#666;
+}
+div.user-details>ul.user-details-choose>li:hover>p{
+    width:100%;
+}
+div.user-details>ul.user-details-choose>li:hover{
+    color:#666;
+}
+
+/*用户发布内容样式设置开始*/
+ul.user-content-show>li.content-box{
+    display:flex;
+    margin-top:20px;
+    justify-content: space-between;
+}
+/*左侧用户样式设置*/
+div.content{
+    width:70%;
+    display:flex;
+    flex-direction: column;
+}
+div.author{
+    display:flex;
+    font-size:0.8rem;
+    height:30px;
+    line-height:30px;
+}
+div.author>a>img{
+    height:30px;
+}
+div.name>a{
+    margin-left:10px;
+}
+div.name>span{
+    margin-left:10px;
+    color:#969696;
+}
+div.content>a.title{
+    font-size:1.1rem;
+    font-weight:700;
+    margin-top:10px;
+}
+div.content>a.title:hover{
+    color:#3D95F4;
+}
+div.content>p.abstract{
+    font-size:0.8rem;
+    line-height:25px;
+    margin-top:15px;
+}
+div.content>div.meta{
+    display:flex;
+    height:20px;
+    margin-top:10px;
+    font-size:0.7rem;
+}
+div.meta>a,div.meta>span{
+    line-height:20px;
+    margin-right:20px;
+    color:#969696;
+}
+div.meta>a.collection-tag{
+    padding:0 5px;
+    border:1px solid #0D95F4;
+    border-radius:3px;
+    color:#0D95F4;
+    box-sizing: border-box;
+}
+div.meta>a:hover{
+    color:#666;
+}
+div.meta>a.collection-tag:hover{
+    background:#f1f1f1;
+}
+
+/*右侧图片样式设置*/
+a.avator{
+    width:26%;
+    position: relative;
+}
+a.avator>img{
+    width:100%;
+    position: relative;
+    top:50%;
+    transform:translate(0,-50%);
+}
+/*用户发布内容样式设置结束*/
+
+/**右侧用户样式设置开始*/
+div.section-right{
+    display: flex;
+    flex-direction: column;
+    width:20%;
+    margin-top:40px;
+}
+div.section-right>p{
+    /*margin-top:20px;*/
+}
+div.section-right>a{
+    margin:10px 5px;
+}
+div.section-right>a>i{
+    margin-right:10px;
+}
+/**右侧用户样式设置结束*/
+button.load-more{
+    border:none;
+    border-radius:5px;
+    height:40px;
+    line-height:40px;
+    color:#f1f1f1;
+    background:#0D95F4;
+    cursor:pointer;
+    opacity:0.9;
+}
+button.load-more:hover{
+    opacity:1;
+}
+/****修改界面延时设置开始*******/
+div.mask{
+    position:fixed;
+    z-index:500;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    display: none;
+}
+div.mask.active{
+    display:block;
+}
+div.mask>div{
+    position:absolute;
+    top:200px;
+    left:50%;
+    margin-left:-200px;
+    width:400px;
+    background:#fff;
+    display:none;
+}
+div.mask>div>i.close{
+    position:absolute;
+    z-index:1000;
+    right:5px;
+    top:5px;
+    cursor:pointer;
+}
+div.mask.active>div.active{
+    display:block;
+}
+div.mask>div>form{
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    padding:50px 20px;
+}
+/****修改界面延时设置结束*******/
+@media screen and (max-width:767px){
+    div.section-left{
+        margin-top:20px;
+    }
+    /*主体左侧内容样式上设置开始*/
+    section.section{
+        flex-wrap: wrap;
+        width:100%;
+        box-sizing:border-box;
+        margin-top:60px;
+    }
+    div.section-left{
+        width:100%;
+
+    }
+    div.section-right{
+        display:none;
+    }
+    div.recommend-topic{
+        width:100%;
+    }
+    ul.sort{
+        justify-content: space-between;
+        font-size:0.9rem;
+    }
+    li.content-box{
+        flex-wrap: wrap;
+    }
+    li.content-box>div{
+        width:100%;
+    }
+    li.content-box>a{
+        width:100%;
+        height:150px;
+        margin-top:30px;
+        border-radius:5px;
+    }
+    div.content>p.abstract{
+        font-size:1rem;
+    }
+    div.content>div.meta{
+        font-size:12px;
+        flex-wrap: wrap;
+    }
+    ul.user-details-choose>li{
+        font-size: 0.9rem;
+    }
+    div.user-info{
+        flex-wrap: wrap;
+
+    }
+    div.user-info>div{
+        margin:0;
+        margin-top:10px;
+    }
+    div.user-info>div>div{
+        flex-wrap:wrap;
+    }
+    div.user-info>div.user-change{
+        flex-direction: row;
+        width:100%;
+    }
+    div.user-info>div.user-change>button{
+        margin-right:10px;
+    }
+    div.mask>div{
+        width:100%;
+        left:0;
+        top:10%;
+        right:0;
+        bottom:10%;
+        margin-left:0;
+    }
+    div.mask>div input.button{
+        border:none;
+        padding:3px 5px;
+        color:#fff;
+        border-radius:3px;
+        background:#0D95F4 ;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .center{
+        min-width:0;
+    }
+    div.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.section{
+        width:80%;
+        margin:100px auto 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.section>div.section-left{
+        margin-top:0;
+        width:100%;
+    }
+    section.section>div.section-right{
+        display:none;
+    }
+}

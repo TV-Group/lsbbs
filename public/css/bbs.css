@@ -1,0 +1,302 @@
+
+/***************************页面主体样式设置开始**************************************/
+section.section{
+    position:relative;
+    display:flex;
+    justify-content: space-between;
+    margin-top:80px;
+    box-sizing: border-box;
+}
+div.section-left,div.section-right{
+    margin-top:350px;
+}
+div.section-left{
+    width:60%;
+}
+/*************主体左侧话题介绍栏**************/
+div.recommend-topic{
+    display:flex;
+    flex-wrap: wrap;
+}
+div.recommend-topic>a{
+    height:32px;
+    line-height:32px;
+    padding:2px 10px 2px 2px;
+    margin:20px 0 0 20px;
+    border:1px solid #DCDCDC;
+    border-radius:3px;
+    background:#F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+div.recommend-topic>a>span{
+    margin-left:5px;
+}
+div.recommend-topic>a:hover{
+    background:#e1e1e1;
+}
+div.recommend-topic>a.more-topic{
+    border:transparent;
+    background:#fff;
+}
+div.recommend-topic>a.more-topic:hover{
+    color:#0D95F4;
+}
+/**************************主体左侧内容展示栏**********/
+
+/****排序按钮样式设置开始***/
+ul.sort{
+    display: flex;
+    margin-top:20px;
+}
+ul.sort>li{
+    margin-right:15px;
+    margin-left:5px;
+    padding:10px 5px;
+    border-bottom:2px solid transparent;
+    cursor:pointer;
+}
+ul.sort>li:hover{
+    border-bottom:2px solid #0D95F4;
+    color:#0D95F4;
+}
+ul.sort>li.active{
+    border-bottom:2px solid #0D95F4;
+    color:#0D95F4;
+}
+/****排序按钮样式设置结束***/
+
+
+/****************主体右侧内容导航栏*******************/
+div.section-right{
+    width:35%;
+    overflow-x: hidden;
+}
+div.section-right>ul.hot-intro>li{
+    margin-top:20px;
+    transition:.3s linear;
+}
+div.section-right>ul.hot-intro>li:hover{
+    opacity:0.8;
+}
+ul.newspaper>li.news-name{
+    display:flex;
+    justify-content: space-between;
+    margin-top:30px;
+    color:#0D95F4;
+}
+ul.newspaper>li.news-name>a{
+    color:#969696;
+}
+ul.newspaper>li.news-name>a:hover{
+    color:#787878;
+}
+ul.newspaper>li>ul.news-content>li{
+    margin-top:10px;
+    cursor:pointer;
+}
+ul.newspaper>li>ul.news-content>li:hover{
+    color:#0D95F4;
+}
+/*用户发布内容样式设置开始*/
+ul.user-content-show>li.content-box{
+    display:flex;
+    margin-top:20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/*左侧用户样式设置*/
+div.content{
+    width:70%;
+    display:flex;
+    flex-direction: column;
+}
+div.author{
+    display:flex;
+    font-size:0.8rem;
+    height:30px;
+    line-height:30px;
+}
+div.author>a>img{
+    height:30px;
+}
+div.name>a{
+    margin-left:10px;
+}
+div.name>span{
+    margin-left:10px;
+    color:#969696;
+}
+div.content>a.title{
+    font-size:1.1rem;
+    font-weight:700;
+    margin-top:10px;
+}
+div.content>a.title:hover{
+    color:#3D95F4;
+}
+div.content>p.abstract{
+    font-size:0.8rem;
+    line-height:25px;
+    margin-top:15px;
+}
+div.content>div.meta{
+    display:flex;
+    height:20px;
+    margin-top:10px;
+    font-size:0.7rem;
+}
+div.meta>a,div.meta>span{
+    line-height:20px;
+    margin-right:20px;
+    color:#969696;
+}
+div.meta>a.collection-tag{
+    padding:0 5px;
+    border:1px solid #0D95F4;
+    border-radius:3px;
+    color:#0D95F4;
+    box-sizing: border-box;
+}
+div.meta>a:hover{
+    color:#666;
+}
+div.meta>a.collection-tag:hover{
+    background:#f1f1f1;
+}
+
+/*右侧图片样式设置*/
+a.avator{
+    width:26%;
+}
+a.avator>img{
+    width:100%;
+    position: relative;
+    top:50%;
+    transform:translate(0,-50%);
+}
+/*用户发布内容样式设置结束*/
+/***************************页面主体样式设置结束*************************************/
+
+
+/****页面模态框样式设置开始****/
+div.mask{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:-10;
+    opacity:0;
+    overflow:hidden;
+    background:rgba(0,0,0,0.6);
+}
+div.mask.active{
+    opacity:1;
+    z-index:500;
+}
+div.mask>div.modal{
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:800px;
+    height:600px;
+    margin-top:-300px;
+    margin-left:-400px;
+    background:rgba(255,255,255,1);
+    box-shadow:0 0 10px #eee;
+}
+#box1,#box2{
+    background:#f1f1f1;
+    width:600px;
+    height:500px;
+    position:absolute;
+    z-index:-10;
+    opacity:0;
+    top:50%;
+    left:50%;
+    margin-top:-250px;
+    margin-left:-350px;
+}
+#box1.active,#box2.active{
+    z-index:500;
+    opacity:1;
+}
+div.mask>div.modal>button{
+    display:inline-block;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+    border:none;
+    background:#333;
+    color:#fff;
+    transition:.2s linear;
+    margin-right:30px;
+}
+div.mask>div.modal>button:hover{
+    background:#444;
+    color:#eee;
+}
+/****页面模态框样式设置结束****/
+/*手机端响应式样式设置开始*/
+@media screen and (max-width:767px){
+    div.section-left{
+        margin-top:20px;
+    }
+    /*主体左侧内容样式上设置开始*/
+    section.section{
+        flex-wrap: wrap;
+        width:100%;
+        box-sizing:border-box;
+    }
+    div.section-left{
+        width:100%;
+
+    }
+    div.section-right{
+        display:none;
+    }
+    div.recommend-topic{
+        width:100%;
+    }
+    ul.sort{
+        justify-content: space-between;
+        font-size:0.9rem;
+    }
+    li.content-box>div{
+        width:100%;
+    }
+    li.content-box>a{
+        width:100%;
+        height:150px;
+        margin-top:30px;
+        border-radius:5px;
+    }
+    div.content>p.abstract{
+        font-size:1rem;
+    }
+    div.content>div.meta{
+        font-size:12px;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    div.section-right>ul.hot-intro{
+        display:none;
+    }
+    section.section>div.section-right{
+        position:absolute;
+        top:220px;
+    }
+    section.section>div.section-left{
+        margin-top:380px;
+    }
+    ul.newspaper>li>ul.news-content>li{
+        margin-top:20px;
+    }
+}

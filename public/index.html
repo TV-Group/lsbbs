@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="shortcut icon" href="img/LS-logo_02.png" />
+    <title>L S 论坛</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/bbs.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <script src="js/jquery-1.11.3-min.js"></script>
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <script>$("nav.nav").load("header.html")</script>
+        </nav>
+        <section class="section center">
+            <div class="carousel after">
+                <div id="carousel-transparent" class="carousel-list after">
+                    <img src="img/onloading.gif" alt="加载中..."/>
+                </div>
+                <div id="carousel-button">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="javascript:" id="prev" class="arrow fa fa-angle-left"></a>
+                <a href="javascript:" id="next" class="arrow fa fa-angle-right"></a>
+            </div>
+            <!--主体左侧内容栏-->
+            <div class="section-left">
+                <!--话题介绍栏-->
+                <div class="recommend-topic">
+                    <a href="javascript:;" target="_blank">
+                        <img src="img/IMG_2226.jpg" alt=""/>
+                        <span>美食</span>
+                    </a>
+                    <a href="javascript:;" target="_blank">
+                        <img src="img/man-hands-reading-boy-large.jpg" alt=""/>
+                        <span>社会热点</span>
+                    </a>
+                    <a href="javascript:;" target="_blank">
+                        <img src="img/16266155_1449641396772.jpg" alt=""/>
+                        <span>乡土故事</span>
+                    </a>
+                    <a href="javascript:;" target="_blank">
+                        <img src="img/sy_20091020135145113016.jpg" alt=""/>
+                        <span>读书</span>
+                    </a>
+                    <a href="javascript:;" target="_blank">
+                        <img src="img/work_story.jpg" alt=""/>
+                        <span>上班那点事</span>
+                    </a>
+                    <a href="javascript:;" target="_blank" class="more-topic">
+                        <span>更多热门专题 <i class="fa fa-angle-right"></i></span>
+                    </a>
+                </div>
+                <ul class="sort">
+                    <li class="bydefault active">默认排序</li>
+                    <li class="byhot">按热度</li>
+                    <li class="bytime">按发布时间</li>
+                    <li class="bycom">按打赏</li>
+                </ul>
+                <div class="block"></div>
+                <!--用户发布内容主体-->
+                <ul class="user-content-show">
+                    <li>
+                        <img src="img/onloading.gif" alt="加载中..." id="loading"/>
+                    </li>
+                </ul>
+            </div>
+            <!--主体右侧内容导航栏-->
+            <div class="section-right">
+                <ul class="hot-intro">
+                    <li>
+                        <a href="javascript:;"><img src="img/banner-s-1-b8ff9ec59f72ea88ecc8c42956f41f78.png" alt=""/></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/banner-s-3-7123fd94750759acf7eca05b871e9d17.png" alt=""/></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png" alt=""/></a>
+                    </li>
+                </ul>
+                <ul class="newspaper">
+                    <li class="news-name">
+                        <span>L S 日报</span>
+                        <a href="javascript:;">查看往期</a>
+                    </li>
+                    <!--用来放置日报每日推荐的版块-->
+                    <li>
+                        <ul class="news-content">
+                            <li class="pm2.5">查看全国实时pm2.5状况</li>
+                            <li class="weather">未来一周的天气情况</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer center">
+            <ul class="pager">
+                <img src="img/onloading.gif" alt="加载中..." id="loading"/>
+            </ul>
+        </footer>
+        <div class="mask">
+            <div class="modal">
+                <div id="box1"></div>
+                <div id="box2"></div>
+                <button class="okay">确认</button>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/bbs.js"></script>
+    <script src="js/pm2.5-weather.js"></script>
+</body>
+</html>

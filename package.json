@@ -1,0 +1,10 @@
+{
+  "name": "LS",
+  "version": "0.0.1",
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

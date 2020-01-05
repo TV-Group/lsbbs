@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="shortcut icon" href="img/LS-logo_02.png" />
+    <title>登录 - L S </title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/login_sign.css"/>
+</head>
+<body>
+    <img src="img/LS-logo.png" alt="" class="logo"/>
+    <div class="sign-login">
+        <ul class="sign-login-sel">
+            <li class="active"><a href="login.html">登录</a></li>
+            <li class="li-point">·</li>
+            <li><a href="sign.html">注册</a></li>
+            <li class="info"></li>
+        </ul>
+        <form id="user-input" method="post">
+            <div class="user">
+                <i class="fa fa-user-o"></i>
+                <input type="text" class="uname" value="lele" name="uname" placeholder="你的昵称"/>
+                <p>用户名为4-16位字符(不包括特殊字符)</p>
+                <div></div>
+            </div>
+            <div class="user">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="upwd" value="123456" name="upwd" placeholder="你的密码"/>
+                <p>密码为6-16位字符(不包括特殊字符)</p>
+                <div></div>
+            </div>
+            <div class="vali">
+                <input type="text"/>
+                <canvas id="canvas">您的浏览器不支持canvas绘图标签</canvas>
+                <span id="result"></span>
+            </div>
+            <span class="rechange">看不清楚,换一张~</span>
+            <input type="button" value="登录" class="submit"/>
+        </form>
+    </div>
+<script src="js/jquery-1.11.3-min.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+/***************页面主要内容样式设置开始******************/
+section.section{
+    display:flex;
+    flex-direction: column;
+    margin-top:120px;
+}
+section.section>h1{
+    font-weight:bolder;
+    font-size:32px;
+}
+section.section>div.author{
+    display: flex;
+    align-items:center;
+    margin-top:20px;
+}
+section.section>div.author>img{
+    width:60px;
+    height:60px;
+    border-radius:30px;
+}
+section.section>div.author>ul{
+    margin-left:20px;
+}
+section.section>div.author>ul>li{
+    display:flex;
+    align-items: center;
+}
+section.section>div.author>ul>li>span{
+    margin-right:10px;
+}
+section.section>div.author>ul span.author-tag{
+    border:1px solid #0A65F4;
+    border-radius:3px;
+    color:#0A65F4;
+    font-size:12px;
+    height:18px;
+    line-height:18px;
+    padding:2px 3px;
+}
+section.section>div.author>ul span.author-name{
+    font-size:18px;
+    height:24px;
+    line-height:24px;
+}
+section.section>div.author>ul span.author-focus{
+    width:50px;
+    height:20px;
+    line-height:20px;
+    font-size:12px;
+    text-align:center;
+    border-radius:10px;
+    background:#0A65F4;
+    color:#fff;
+}
+section.section>div.author>ul>li+li{
+    font-size:12px;
+    color:#aaa;
+    margin-top:5px;
+}
+
+section.section>div.author-content{
+    margin-top:20px;
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.section>div.author-content>p{
+    line-height:40px;
+}
+section.section>div.author-content>img{
+    width:100%;
+    margin:50px;
+}
+section.section>div.section-footer{
+    width:80%;
+    display:flex;
+    justify-content: space-between;
+    margin-top:60px;
+}
+div.section-footer>div.fav{
+    width:200px;
+    height:60px;
+    line-height:40px;
+    text-align:center;
+    border:1px solid #0A65F4;
+    border-radius:30px;
+    display:flex;
+    justify-content: space-around;
+    box-sizing:border-box;
+    padding:10px 30px;
+    font-size:20px;
+    color:#0A65F4;
+    cursor:pointer;
+}
+
+div.section-footer>div.fav.active{
+    background:#0A65F4;
+    color:#fff;
+}
+
+div.section-footer>div.fav:hover{
+    background:#f6f6f6;
+}
+div.section-footer>div.fav.active:hover{
+    background:#0A65F4;
+    color:#fff;
+}
+div.section-footer>div.share{
+    display:flex;
+    justify-content: space-between;
+}
+div.section-footer>div.share>a{
+    height:60px;
+    padding:0 20px;
+    border-radius:30px;
+    line-height:60px;
+    border:1px solid #ddd;
+    text-align:center;
+    margin-left:10px;
+    font-size:20px;
+    color:#999;
+    position:relative;
+}
+div.section-footer>div.share>a>div{
+    position:absolute;
+    font-size:16px;
+    z-index:10;
+    border-radius:5px;
+    background:#333;
+    color:#f1f1f1;
+    width:120px;
+    height:40px;
+    line-height:40px;
+    top:-50px;
+    left:-30px;
+    opacity:0;
+    overflow: hidden;
+    transition:.2s linear;
+}
+div.section-footer>div.share>a:hover>div{
+    opacity:1;
+    z-index:50;
+}
+div.section-footer>div.share>a:hover{
+    background:#f1f1f1;
+}
+/***************页面主要内容样式设置结束******************/
+footer.footer{
+    text-align: center;
+}
+ul.pager{
+    display:flex;
+}
+ul.pager>li{
+    margin-right:5px;
+    border:1px solid #bbb;
+    border-radius:3px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    cursor:pointer;
+}
+ul.pager>li:hover{
+    background:#eee;
+}
+ul.pager>li.active{
+    border:1px solid transparent;
+    cursor:default;
+}
+ul.pager>li.active:hover{
+    background: #fff;
+}
+ul.pager>li.prev,ul.pager>li.next {
+    width : 80px;
+}
+/*******评论区样式设置开始*******/
+div.comment{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:50px;
+}
+div.comment>img{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    box-sizing: border-box;
+    border:1px solid #aaa;
+    padding:2px;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+div.comment>div.comment-box{
+    width:65%;
+    box-sizing: border-box;
+}
+div.comment>div.comment-box>textarea{
+    padding: 10px 15px;
+    width: 100%;
+    height: 80px;
+    font-size: 13px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: hsla(0,0%,71%,.1);
+    resize: none;
+    display: inline-block;
+    vertical-align: top;
+    outline-style: none;
+    color:#666;
+    box-sizing:border-box;
+}
+div.comment>div.comment-post{
+    width:70%;
+    box-sizing: border-box;
+    text-align:right;
+}
+div.comment>div.comment-post>button{
+    width: 78px;
+    margin: 10px 0;
+    padding: 8px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    color: #fff!important;
+    background-color: #0A65F4;
+    cursor: pointer;
+    outline: none;
+}
+div.comment-container>p.comment-header{
+    font-weight:bolder;
+    margin-top:20px;
+    width:100%;
+}
+ul.comment-content{
+    display:flex;
+    flex-direction: column;
+}
+ul.comment-content>li{
+    margin:20px 0;
+}
+li.com-con-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+li.com-con-box>div.com-con-hea{
+    display:flex;
+    margin-top:20px;
+    align-items: center;
+}
+li.com-con-box>div.com-con-hea>img{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    box-sizing:border-box;
+    border:1px solid #aaa;
+    padding:1px;
+    margin-right:10px;
+}
+li.com-con-box>div.com-con-hea>div{
+    color:#111;
+}
+li.com-con-box>div.com-con-hea>div>div{
+    color:#999;
+    font-size:12px;
+    display:flex;
+    margin-top:5px;
+}
+li.com-con-box>div.com-con-hea>div>div>span{
+    margin-right:20px;
+}
+li.com-con-box>div.com-con-con{
+    margin-top:10px;
+}
+li.com-con-box>div.com-con-foo{
+    color:#999;
+    margin-top:10px;
+    display: flex;
+}
+li.com-con-box>div.com-con-foo>p{
+    font-size:14px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+}
+li.com-con-box>div.com-con-foo>p>span{
+    margin-left:5px;
+}
+li.com-con-box>div.com-con-foo>p.active{
+    color:#0A65F4;
+}
+/*******评论区样式设置结束*******/
+@media screen and (max-width:991px){
+    .center{
+        min-width:0;
+        box-sizing: border-box;
+    }
+    div.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.section{
+        width:80%;
+        margin:150px auto 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.section>h1{
+        font-size:1.4rem;
+    }
+    section.section>div.author{
+        flex-wrap: wrap;
+    }
+    section.section>div.author>ul{
+        width:100%;
+        margin-left:0;
+        margin-top:10px;
+    }
+    section.section>div.author>ul>li:nth-child(2){
+        flex-wrap: wrap;
+    }
+    section.section>div.author-content{
+        width:100%;
+    }
+    section.section>div.author-content>img{
+        margin-bottom:0;
+    }
+    section.section>div.section-footer{
+        flex-wrap: wrap;
+        width:100%;
+        margin-top:20px;
+    }
+    section.section>div.section-footer>div.fav{
+        width:60%;
+        margin:0 auto;
+    }
+    section.section>div.section-footer>div.share{
+        flex-wrap: wrap;
+    }
+    section.section>div.section-footer>div.share>a{
+        margin-top:20px;
+    }
+}
+@media screen and (max-width:767px){
+    section.section{
+        width:90%;
+    }
+    section.section>div.section-footer>div.fav{
+        width:100%;
+        margin:0;
+    }
+    div.comment>div.comment-box{
+        width:100%;
+    }
+    section.section>div.section-footer>div.fav{
+
+    }
+}

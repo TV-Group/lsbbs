@@ -1,0 +1,185 @@
+body{
+    background:#F1F1F1;
+}
+img.logo{
+    position:absolute;
+    top:50px;
+    left:60px;
+}
+/*************注册界面样式设置开始************/
+div.sign-login{
+    width:400px;
+    padding:100px 10px;
+    box-sizing:border-box;
+    box-shadow: 0 0 20px #E6E6E6;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius:5px;
+    margin:50px auto;
+    background:#fff;
+}
+ul.sign-login-sel{
+    width:150px;
+    display:flex;
+    justify-content:space-between;
+    font-size:18px;
+    color:#969696;
+    position:relative;
+}
+ul.sign-login-sel>li{
+    padding:10px;
+}
+ul.sign-login-sel>li.info{
+    position:absolute;
+    top:57px;
+    left:-10px;
+    border-radius:3px;
+    width:150px;
+    height:10px;
+    line-height:10px;
+    text-align:center;
+
+}
+ul.sign-login-sel>li.info>b{
+    font-size:12px;
+    font-weight:normal;
+    padding:3px;
+    box-shadow:0 0 5px #eee;
+}
+ul.sign-login-sel>li:nth-child(1):hover,ul.sign-login-sel>li:nth-child(3):hover{
+    border-bottom:2px solid #0D96F6;
+}
+ul.sign-login-sel>li a{
+    color:#969696;
+}
+ul.sign-login-sel>li.active{
+    border-bottom:2px solid #0D96F6;
+}
+ul.sign-login-sel>li.active a{
+    color:#0D96F6;
+    font-weight:bold;
+}
+/****用户表单输入样式设置开始*****/
+#user-input{
+    display: flex;
+    flex-direction:column;
+    margin-top:50px;
+}
+#user-input>div.user{
+    position: relative;
+    color:#969696;
+    font-size:18px;
+    background: #F8F8F8;
+    border:1px solid #C8C8C8;
+}
+#user-input>div.user>i{
+    position:absolute;
+    top:16px;
+    left:10px;
+}
+#user-input>div.user>p{
+    position:absolute;
+    top:-10px;
+    left:25px;
+    height:10px;
+    line-height:10px;
+    background:#f1f1f1;
+    padding:5px;
+    border-radius:3px;
+    font-size:12px;
+    border:1px solid #969696;
+    opacity:0;
+    transition:.3s linear;
+}
+#user-input>div.user>p.active{
+    opacity:1;
+}
+#user-input>div.user>div{
+    position: absolute;
+    top: 16px;
+    right:-160px;
+    font-size:12px;
+    font-weight:normal;
+    width:150px;
+}
+#user-input>div.user input{
+    width:300px;
+    height:50px;
+    line-height:50px;
+    color:#969696;
+    padding-left:30px;
+    box-sizing: border-box;
+    border:none;
+    background:transparent;
+}
+#user-input>div:nth-child(1){
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom:0;
+}
+#user-input>div:nth-child(2){
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+}
+#user-input>input.submit{
+    width:300px;
+    height:44px;
+    margin-top:30px;
+    border-radius:22px;
+    border:none;
+    color:#fff;
+    font-size:18px;
+    background:#42c02e;
+    cursor:pointer;
+}
+#user-input>input.submit:hover{
+    background:#30c02e;
+}
+/*************注册界面样式设置结束************/
+#user-input>div.vali{
+    font-size:12px;
+    margin-top:10px;
+    display:flex;
+    align-items: center;
+}
+#user-input>div.vali>input{
+    width:100px;
+    padding:5px 10px;
+    border-radius:2px;
+    border:1px solid #969696;
+}
+#user-input>span.rechange{
+    font-size:12px;
+    cursor:pointer;
+    margin-top:10px;
+    width:100px;
+    height:16px;
+}
+#user-input>span.rechange:hover{
+    color:#0D96F6;
+}
+/*canvas验证码样式设置开始*/
+#canvas{
+    background:#f1f1f1;
+    margin-left:5px;
+}
+/*canvas验证码样式设置结束*/
+@media screen and (max-width:767px){
+    img.logo{
+        position: static;
+        display:block;
+        margin:40px auto;
+        background: transparent;
+    }
+    div.sign-login{
+        width:100%;
+        padding:0;
+        text-align: center;
+    }
+    #user-input>div.user>div{
+        right:5px;
+        text-align: right;
+    }
+}
+
